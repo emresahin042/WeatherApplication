@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <img src="http://www.freeiconspng.com/uploads/weather-icon-png-15.png">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-3"></div>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <ng-select class="cityName" [allowClear]="true" [items]="items" [disabled]="disabled" (data)="refreshValue($event)" (selected)="selected($event)"
+            (removed)="removed($event)" (typed)="typed($event)" placeholder="Şehir seçiniz.">
+          </ng-select>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-5 col-sm-5 col-xs-5"></div>
+        <div class="col-md-2 col-sm-2 col-xs-3">
+          <button *ngIf="isDisable" type="button" class="btn btn-primary" (click)="sendCityWeather($event)">Göster</button>
+        </div>
+        <div class="col-md-5 col-sm-5 col-xs-35"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
